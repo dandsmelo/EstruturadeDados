@@ -10,6 +10,20 @@ public class ListaLigada {
         novo.prox = inicio;
         inicio = novo;
     }
+
+    public void adicionaFinal(int e){
+        if(inicio == null){
+            inicio = new No(e);
+        } else {
+            No aux = inicio;
+            while (aux.prox != null){
+                aux = aux.prox;
+            }
+            No novo = new No(e);
+            aux.prox = novo;
+        }
+    }
+
    public int removeInicio() throws Exception{
         if (inicio == null)
             throw new Exception("ERRO! Lista Vazia");
