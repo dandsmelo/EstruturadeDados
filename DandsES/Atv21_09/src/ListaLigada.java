@@ -42,4 +42,23 @@ public class ListaLigada {
         }
         return r;
     }   
+    public int removeFinal() throws Exception{
+        int r = -1;
+        if (inicio == null){
+            throw new Exception("ERRO! Lista Vazia!");
+        } else {
+            if(inicio.prox == null){
+                r = inicio.dado;
+                inicio = null;
+            } else {
+                No aux = inicio;
+                while (aux.prox.prox != null){
+                    aux = aux.prox;
+                }
+                r = aux.prox.dado;
+                aux.prox = null;
+            }
+        }
+        return r;
+    }
 }
