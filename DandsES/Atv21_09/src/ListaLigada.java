@@ -61,4 +61,25 @@ public class ListaLigada {
         }
         return r;
     }
+    public void adiciona(int e){
+        if(inicio == null){
+            inicio = new No(e);
+        } else {
+            if (e < inicio.dado){
+                adicionaInicio(e);
+            } else {
+                No aux = inicio;
+                while(aux.prox != null && aux.prox.dado < e){
+                    aux = aux.prox;
+                }
+                if(aux.prox != null){
+                    No novo = new No(e);
+                    novo.prox = aux.prox;
+                    aux.prox = novo;
+                } else {
+                    adicionaFinal(e);
+                }
+            }
+        }
+    }
 }
