@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TestePilha {
     public static void main(String args[]){
-      PilhaDeInteiros f1 = new PilhaDeInteiros(4);
+      PilhaDeInteiros p1 = new PilhaDeInteiros(4);
       int op, valor;   
       Scanner sc = new Scanner(System.in);
       do{
@@ -16,17 +16,17 @@ public class TestePilha {
                     case 1: 
                        System.out.println("Valor? ");
                        valor = sc.nextInt();
-                       f1.empilhar(valor);
+                       p1.empilhar(valor);
                        break;
                     case 2:
-                       valor= f1.desempilhar();
-                       System.out.println("Elemento removido "+valor);
+                       valor = p1.desempilhar();
+                       System.out.println("Elemento removido "+ valor);
                        break;   
                     case 3:
-                       if (f1.vazia()){
+                       if (p1.vazia()){
                         System.out.println("Não há elementos na lista");
                        } else {
-                         System.out.println("Pilha: " + f1.toString());
+                         System.out.println("Pilha: " + p1.toString());
                        }
                        break;
                     case 99:

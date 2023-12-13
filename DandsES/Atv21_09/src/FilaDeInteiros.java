@@ -44,16 +44,13 @@ public class FilaDeInteiros {
         if (vazia())
             throw new Exception("ERRO! Lista Vazia");
         else{
-            //guarda o elemento que será removido para retorná-lo no final
-            int r = dados[0];
+            int r = dados[0];//guarda o elemento que será removido para retorná-lo no final
             //move um elemento à esquerda quando a lista tiver mais que um elemento
             for(int i=0;i<tamanho-1;i++){
                 dados[i]=dados[i+1];
             }
-            //decrementar o tamanho para ajustá-lo à quantidade de elementos
-            tamanho--;
-            //retornar o elemento que foi removido
-            return r;
+            tamanho--;//decrementar o tamanho para ajustá-lo à quantidade de elementos
+            return r;//retornar o elemento que foi removido
         }
     }
 }
